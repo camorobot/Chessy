@@ -8,7 +8,6 @@ import nl.camorobot.chessy.scenes.chess.tilemap.entitys.ChessEntityTile;
 public class TileMapBoard extends TileMap {
 
     public TileMapBoard(){
-
     }
 
     public TileMapBoard(final Coordinate2D location, final Size size){

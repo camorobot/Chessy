@@ -10,18 +10,18 @@ public class ChessEntityTile extends SpriteEntity {
     }
 
     public enum ChessPiece {
-        WHITE_PION("sprites/w_pawn_2x_ns.png"),
-        WHITE_ROOK("sprites/w_rook_2x_ns.png"),
-        WHITE_BISHOP("sprites/w_bishop_2x_ns.png"),
-        WHITE_KNIGHT("sprites/w_knight_2x_ns.png"),
-        WHITE_KING("sprites/w_king_2x_ns.png"),
-        WHITE_QUEEN("sprites/w_queen_2x_ns.png"),
-        BLACK_PION("sprites/b_pawn_2x_ns.png"),
-        BLACK_ROOK("sprites/b_rook_2x_ns.png"),
-        BLACK_BISHOP("sprites/b_bishop_2x_ns.png"),
-        BLACK_KNIGHT("sprites/b_knight_2x_ns.png"),
-        BLACK_KING("sprites/b_king_2x_ns.png"),
-        BLACK_QUEEN("sprites/b_queen_2x_ns.png");
+        WHITE_PION("sprites/WHITE_PAWN.png"),
+        WHITE_ROOK("sprites/WHITE_ROOK.png"),
+        WHITE_BISHOP("sprites/WHITE_BISHOP.png"),
+        WHITE_KNIGHT("sprites/WHITE_KNIGHT.png"),
+        WHITE_KING("sprites/WHITE_KING.png"),
+        WHITE_QUEEN("sprites/WHITE_QUEEN.png"),
+        BLACK_PION("sprites/BLACK_PAWN.png"),
+        BLACK_ROOK("sprites/BLACK_ROOK.png"),
+        BLACK_BISHOP("sprites/BLACK_BISHOP.png"),
+        BLACK_KNIGHT("sprites/BLACK_KNIGHT.png"),
+        BLACK_KING("sprites/BLACK_KING.png"),
+        BLACK_QUEEN("sprites/BLACK_QUEEN.png");
 
         String sprite;
 
