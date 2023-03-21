@@ -13,7 +13,7 @@ public class Chessy extends YaegerGame {
     @Override
     public void setupGame() {
         setGameTitle("Chessy");
-        setSize(new Size(700, 700));
+        setSize(new Size(800, 800));
 
     }
 

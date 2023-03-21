@@ -17,6 +17,7 @@ public class TileMapBoard extends TileMap {
     @Override
     public void setupEntities() {
         // white pieces
+        addEntity(0,ChessEntityTile.class, ChessEntityTile.ChessPiece.TRANSPARANT);
         addEntity(1, ChessEntityTile.class, ChessEntityTile.ChessPiece.WHITE_PION);
         addEntity(2, ChessEntityTile.class, ChessEntityTile.ChessPiece.WHITE_ROOK);
         addEntity(3, ChessEntityTile.class, ChessEntityTile.ChessPiece.WHITE_BISHOP);

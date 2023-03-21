@@ -21,7 +21,8 @@ public class ChessEntityTile extends SpriteEntity {
         BLACK_BISHOP("sprites/BLACK_BISHOP.png"),
         BLACK_KNIGHT("sprites/BLACK_KNIGHT.png"),
         BLACK_KING("sprites/BLACK_KING.png"),
-        BLACK_QUEEN("sprites/BLACK_QUEEN.png");
+        BLACK_QUEEN("sprites/BLACK_QUEEN.png"),
+        TRANSPARANT("sprites/transparent.png");
 
         String sprite;
 
