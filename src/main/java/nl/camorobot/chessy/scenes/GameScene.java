@@ -27,7 +27,8 @@ public class GameScene extends DynamicScene implements TileMapContainer{
 
     @Override
     public void setupScene() {
-    setBackgroundImage("backgrounds/Chessboard.png");
+        setBackgroundImage("backgrounds/Chessboard.png");
+
     }
 
     @Override
@@ -101,5 +102,9 @@ public class GameScene extends DynamicScene implements TileMapContainer{
         for(int i = 0; i< pieceOnBoard.size(); i++){
             addEntity(pieceOnBoard.get(i));
         }
+
+//        public Draggable getPiece(){
+//            return pieceOnBoard.get()
+//        }
     }
 }
