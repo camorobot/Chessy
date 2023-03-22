@@ -19,7 +19,13 @@ public class GameScene extends DynamicScene implements TileMapContainer{
     private static final double MARGIN = 100d;
     private static final double CONTROL_AREA_MARGIN = 140D;
     private static final double TEXTFIELD_MARGIN = 20D;
+
     private Chessy chessy;
+    private static GameScene gameScene = new GameScene(Chessy.getChessy());
+
+    ArrayList<Draggable> pieceOnBoard = new ArrayList<>();
+    ArrayList<DropArea> dropBoard = new ArrayList<>();
+
 
     public GameScene(Chessy chessy){
         this.chessy = chessy;
@@ -28,7 +34,6 @@ public class GameScene extends DynamicScene implements TileMapContainer{
     @Override
     public void setupScene() {
         setBackgroundImage("backgrounds/Chessboard.png");
-
     }
 
     @Override
@@ -38,15 +43,10 @@ public class GameScene extends DynamicScene implements TileMapContainer{
 
     @Override
     public void setupTileMaps() {
-//        var fullScreenMap = new TileMapBoard();
-//        addTileMap(fullScreenMap);
-
-
 
         /**
          * maak alle drop items aan en plaats ze op het bord
          * */
-        ArrayList<DropArea> dropBoard = new ArrayList<>();
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
                 DropArea dropArea = new DropArea(new Coordinate2D(0 + ((getWidth() / 8) * i), 0 + ((getHeight() / 8) * j)), new Size(getWidth() / 8, getHeight() / 8));
@@ -59,7 +59,6 @@ public class GameScene extends DynamicScene implements TileMapContainer{
             addEntity(dropBoard.get(i));
         }
 
-        ArrayList<Draggable> pieceOnBoard = new ArrayList<>();
         String sprite = "sprites/WHITE_ROOK.png";
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
@@ -99,12 +98,27 @@ public class GameScene extends DynamicScene implements TileMapContainer{
             }
         }
 
-        for(int i = 0; i< pieceOnBoard.size(); i++){
+        for(int i = 1; i< pieceOnBoard.size(); i++){
             addEntity(pieceOnBoard.get(i));
         }
 
 //        public Draggable getPiece(){
 //            return pieceOnBoard.get()
 //        }
+        System.out.println(pieceOnBoard.size());
+        System.out.println(pieceOnBoard);
+        System.out.println("setup tilemaps is done");
+    }
+
+    public void setPieceOnBord(int oldLocation, int newLocation, Draggable newPiece){
+//        System.out.println(pieceOnBoard.get(newLocation));
+        pieceOnBoard.set(oldLocation, newPiece);
+//        System.out.println(pieceOnBoard.get(0));
+
+        addEntity(pieceOnBoard.get(0));
+    }
+
+    public static GameScene getGameScene() {
+        return gameScene;
     }
 }

@@ -49,8 +49,11 @@ public class Draggable extends SpriteEntity implements MouseDraggedListener {
     public void onDropped(final Coordinate2D coordinate2D) {
         setAnchorLocation(initialPosition);
         System.out.println("source: " + location+ " MapID: "+ tileMapBoard.getMapId(location));
-
         System.out.println("coordinate2D: " +coordinate2D + " MapID: " +tileMapBoard.getMapId(coordinate2D));
+
+
+        // update de start locatie naar de eindlocatie
+        tileMapBoard.setMapPiece(tileMapBoard.getMapId(location), tileMapBoard.getMapId(coordinate2D), this);
         isDragged = false;
     }
 
